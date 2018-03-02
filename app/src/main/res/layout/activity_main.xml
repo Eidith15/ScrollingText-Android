@@ -5,6 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp"
     tools:context="sab.tugas2.eidith.scrollingtext.MainActivity">
 
     <TextView
@@ -20,28 +24,34 @@
         android:textAppearance="@android:style/TextAppearance.Large"
         android:textStyle="bold"
         android:text="@string/article_title"/>
-    <TextView
-        android:id="@+id/article_subheading"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/article_heading"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:textAppearance="@android:style/TextAppearance"
-        android:text="@string/article_subtitle"/>
+
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/article_subheading">
-        <TextView
-            android:id="@+id/article"
-            android:layout_width="wrap_content"
+        android:layout_below="@id/article_heading">
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:lineSpacingExtra="5sp"
-            android:autoLink="web"
-            android:text="@string/article_text"/>
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/article_subheading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/article_heading"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textAppearance="@android:style/TextAppearance"
+                android:text="@string/article_subtitle"/>
+            <TextView
+                 android:id="@+id/article"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="5sp"
+                android:autoLink="web"
+                android:text="@string/article_text"/>
+        </LinearLayout>
     </ScrollView>
 
 </RelativeLayout>
